@@ -6,3 +6,5 @@ Site vitrine haut de gamme pour une agence specialisee dans la creation de sites
 - **Sections :** Hero asymetrique, a propos, methodologie, services, portfolio, temoignages, contact
 - **Skill utilise :** taste-skill
 - **Date de creation :** Avril 2026
+
+**Voir le site en ligne :** [https://adriency.github.io/atelier-forma/](https://adriency.github.io/atelier-forma/)
