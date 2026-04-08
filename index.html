@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atelier Forma — Agence de création de sites vitrines haut de gamme. Design sur mesure, expérience immersive, performance mesurable pour les marques ambitieuses.">
+  <meta property="og:title" content="Atelier Forma — Sites vitrines haut de gamme">
+  <meta property="og:description" content="Sites vitrines d'exception pour marques ambitieuses. Design exclusif, animations soignées, performance optimisée.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Atelier Forma — Sites vitrines haut de gamme | Paris</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23C4603C'/><text x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='17' font-weight='bold' fill='white'>A</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    img{display:block;max-width:100%}
+    button{cursor:pointer;font:inherit}
+    a{color:inherit;text-decoration:none}
+    ul,ol{list-style:none}
+
+    :root{
+      --bg:#F7F5F1;--sf:#FFFFFF;--sf2:#F0EDE8;
+      --ink:#111111;--ink2:#374151;--ink3:#6B7280;--ink4:#9CA3AF;
+      --bdr:rgba(17,17,17,.08);--bdr-h:rgba(17,17,17,.16);
+      --ac:#C4603C;--ac-h:#A84F31;--ac-bg:#F5EAE4;--ac-sh:rgba(196,96,60,.28);
+      --dk:#0F0F0D;--dk2:#1A1A18;--dk-tx:#EAEAE8;
+      --fd:'Fraunces',Georgia,serif;--fb:'Outfit',system-ui,sans-serif;
+      --e:cubic-bezier(.4,0,.2,1);--sp:cubic-bezier(.34,1.56,.64,1);
+      --s1:0 1px 4px rgba(17,15,11,.05);--s2:0 6px 24px rgba(17,15,11,.09);--s3:0 16px 48px rgba(17,15,11,.12);
+    }
+
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:1rem;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+    body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.03;mix-blend-mode:multiply;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E") repeat;background-size:160px}
+
+    #pbar{position:fixed;top:0;left:0;height:2px;width:0;background:var(--ac);z-index:2000;transition:width .06s linear}
+    .skip{position:absolute;top:-100px;left:1rem;background:var(--ink);color:#fff;padding:.5rem 1rem;border-radius:4px;font-size:.875rem;z-index:9998;transition:top .2s}
+    .skip:focus{top:1rem}
+
+    .txl{font-family:var(--fd);font-size:clamp(3rem,7vw,6.5rem);font-weight:400;line-height:1.02;letter-spacing:-.035em;text-wrap:balance}
+    .tl{font-family:var(--fd);font-size:clamp(2.25rem,5vw,4.25rem);font-weight:400;line-height:1.06;letter-spacing:-.03em;text-wrap:balance}
+    .tm{font-family:var(--fd);font-size:clamp(1.75rem,3.5vw,2.75rem);font-weight:400;line-height:1.12;letter-spacing:-.025em;text-wrap:balance}
+    .bt{font-size:1.0625rem;color:var(--ink2);line-height:1.75;text-wrap:pretty;max-width:65ch}
+    .lb{font-size:.6875rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:1rem}
+    .lb-a{color:var(--ac)}
+    .hi{font-style:italic;color:var(--ac)}
+
+    .ctn{max-width:1360px;margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem)}
+    .sec{padding:clamp(5rem,10vw,9rem) 0}
+    section{overflow:hidden}
+
+    .btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fb);font-size:.9375rem;font-weight:500;padding:.875rem 1.75rem;border-radius:6px;border:none;white-space:nowrap;letter-spacing:-.01em;transition:transform .22s var(--e),background .22s,box-shadow .22s}
+    .btn:hover{transform:translateY(-1px)}.btn:active{transform:translateY(1px) scale(.98)}
+    .btn:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+    .btn .ar{display:inline-block;transition:transform .25s var(--sp)}
+    .btn:hover .ar{transform:translateX(5px)}
+    .btn-p{background:var(--ac);color:#fff;box-shadow:0 6px 24px var(--ac-sh)}
+    .btn-p:hover{background:var(--ac-h);box-shadow:0 10px 32px rgba(196,96,60,.36)}
+    .btn-s{background:var(--ink);color:#fff}
+    .btn-s:hover{background:#1f1f1d;box-shadow:0 6px 20px rgba(17,15,11,.2)}
+    .btn-o{background:transparent;border:1px solid var(--bdr-h);color:var(--ink)}
+    .btn-o:hover{background:rgba(17,17,17,.03);border-color:rgba(17,17,17,.22)}
+
+    .rv{opacity:0;transform:translateY(22px);transition:opacity .65s var(--e),transform .65s var(--e)}
+    .rv.on{opacity:1;transform:none}
+    .d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}.d4{transition-delay:.28s}.d5{transition-delay:.35s}
+
+    .spot{position:relative;overflow:hidden}
+    .spot::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(circle 300px at var(--mx,50%) var(--my,50%),rgba(196,96,60,.07),transparent 60%);opacity:0;transition:opacity .35s}
+    .spot:hover::after{opacity:1}
+    .mag{transition:transform .3s var(--sp)}
+
+    /* ═══ NAV ═══ */
+    #nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.25rem 0;transition:background .3s var(--e),box-shadow .3s,padding .3s}
+    #nav.sc{background:rgba(247,245,241,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--bdr);padding:.85rem 0}
+    .nv{display:flex;align-items:center;justify-content:space-between;gap:2rem}
+    .logo{font-family:var(--fd);font-size:1.4rem;font-weight:600;letter-spacing:-.025em;flex-shrink:0}
+    .logo em{color:var(--ac);font-style:normal}
+    .nl{display:flex;align-items:center;gap:2.25rem}
+    .nl a{font-size:.9375rem;color:var(--ink3);position:relative;transition:color .2s}
+    .nl a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1.5px;background:var(--ac);transition:width .25s var(--e)}
+    .nl a:hover{color:var(--ink)}.nl a:hover::after{width:100%}
+    .hm{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px}
+    .hm span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s var(--e),opacity .3s}
+    .hm.on span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hm.on span:nth-child(2){opacity:0}
+    .hm.on span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    #mm{display:none;position:fixed;inset:0;background:var(--bg);z-index:999;padding:6rem 2rem 3rem;flex-direction:column;gap:.25rem}
+    #mm.on{display:flex}
+    #mm a.ml{font-family:var(--fd);font-size:2.5rem;font-weight:400;letter-spacing:-.03em;padding:.5rem 0;border-bottom:1px solid var(--bdr);transition:color .2s,padding-left .2s var(--e)}
+    #mm a.ml:hover{color:var(--ac);padding-left:.5rem}
+    #mm .btn{margin-top:2rem;justify-content:center}
+
+    /* ═══ HERO ═══ */
+    #hero{min-height:100dvh;display:flex;align-items:center;padding-top:80px;position:relative}
+    .h-orb{position:absolute;top:5%;right:-8%;width:clamp(300px,48vw,600px);height:clamp(300px,48vw,600px);border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,var(--ac-bg) 0%,transparent 65%)}
+    .hg{display:grid;grid-template-columns:55fr 45fr;gap:clamp(2rem,5vw,5rem);align-items:center;position:relative;z-index:1}
+    .h-lb{display:inline-flex;align-items:center;gap:.625rem;margin-bottom:2rem;opacity:0;transform:translateY(14px);animation:fu .6s var(--e) .15s forwards}
+    .h-lb::before{content:'';width:28px;height:1px;background:var(--ac);display:inline-block}
+    .h-h1{opacity:0;transform:translateY(28px);animation:fu .85s var(--e) .3s forwards;margin-bottom:1.75rem}
+    .h-sub{opacity:0;transform:translateY(18px);animation:fu .85s var(--e) .48s forwards;margin-bottom:2.5rem}
+    .h-ctas{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:3.5rem;opacity:0;transform:translateY(14px);animation:fu .8s var(--e) .62s forwards}
+    .h-kpi{display:flex;gap:2.5rem;flex-wrap:wrap;border-top:1px solid var(--bdr);padding-top:1.75rem;opacity:0;transform:translateY(10px);animation:fu .8s var(--e) .78s forwards}
+    .kv{font-family:var(--fd);font-size:clamp(2rem,3.5vw,2.75rem);font-weight:600;letter-spacing:-.04em;line-height:1;margin-bottom:.25rem;font-variant-numeric:tabular-nums}
+    .kl{font-size:.8125rem;color:var(--ink3)}
+    @keyframes fu{to{opacity:1;transform:none}}
+
+    .h-vis{position:relative;height:520px;opacity:0;animation:fu .8s var(--e) .5s forwards}
+    .hc{position:absolute;border-radius:16px;overflow:hidden;box-shadow:var(--s3);transition:box-shadow .4s,transform .45s var(--e);z-index:1}
+    .hc:hover{box-shadow:0 24px 56px rgba(17,15,11,.22);z-index:5}
+    .hc img{width:100%;height:100%;object-fit:cover}
+    .hc-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,15,13,.72) 0%,transparent 50%);padding:1.25rem;display:flex;flex-direction:column;justify-content:flex-end}
+    .hc-nm{font-family:var(--fd);font-size:1rem;color:#fff;letter-spacing:-.01em}
+    .hc-tg{font-size:.6875rem;color:rgba(255,255,255,.55);letter-spacing:.08em;text-transform:uppercase;margin-top:.15rem}
+    .hc:nth-child(1){width:230px;height:310px;top:20px;left:0;transform:rotate(-5deg)}
+    .hc:nth-child(2){width:240px;height:330px;top:85px;left:125px;transform:rotate(3deg);z-index:2}
+    .hc:nth-child(3){width:210px;height:290px;top:185px;left:250px;transform:rotate(-2deg)}
+    .hc:nth-child(1):hover{transform:rotate(-3deg) scale(1.03) translateY(-6px)}
+    .hc:nth-child(2):hover{transform:rotate(1.5deg) scale(1.03) translateY(-6px)}
+    .hc:nth-child(3):hover{transform:rotate(-1deg) scale(1.03) translateY(-6px)}
+
+    /* ═══ BAND ═══ */
+    .band{background:var(--ink);padding:1.25rem 0;overflow:hidden}
+    .band-t{display:flex;gap:3.5rem;width:max-content;animation:mq 26s linear infinite}
+    .band-i{font-family:var(--fd);font-size:1.0625rem;color:rgba(234,234,234,.28);white-space:nowrap;font-style:italic;letter-spacing:-.01em;display:flex;align-items:center;gap:3.5rem}
+    .band-i::after{content:'·';color:var(--ac);font-style:normal;font-size:1.25rem}
+    @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* ═══ ABOUT ═══ */
+    #about{background:var(--sf)}
+    .ab-g{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,7vw,7rem);align-items:center}
+    .ab-im{position:relative}
+    .ab-im img{width:100%;height:560px;object-fit:cover;border-radius:20px}
+    .ab-bd{position:absolute;bottom:-1.25rem;right:-1.25rem;background:var(--ac);color:#fff;padding:1.25rem 1.5rem;border-radius:14px;box-shadow:0 8px 28px var(--ac-sh)}
+    .ab-bd strong{font-family:var(--fd);font-size:2.5rem;font-weight:600;letter-spacing:-.05em;line-height:1;display:block}
+    .ab-bd span{font-size:.8125rem;opacity:.85;display:block;margin-top:.15rem}
+    .ab-vals{margin-top:2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .av{padding:1.25rem;border:1px solid var(--bdr);border-radius:12px;background:var(--bg);transition:border-color .25s,box-shadow .25s}
+    .av:hover{border-color:var(--bdr-h);box-shadow:var(--s1)}
+    .av-i{width:36px;height:36px;border-radius:8px;background:var(--ac-bg);display:flex;align-items:center;justify-content:center;margin-bottom:.875rem}
+    .av-i svg{width:17px;height:17px;stroke:var(--ac);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+    .av h4{font-size:.9375rem;font-weight:600;letter-spacing:-.01em;margin-bottom:.3rem}
+    .av p{font-size:.8125rem;color:var(--ink3);line-height:1.55;margin:0}
+
+    /* ═══ METHODOLOGY ═══ */
+    .steps{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--bdr);border:1px solid var(--bdr);border-radius:20px;overflow:hidden}
+    .st{background:var(--sf);padding:clamp(2rem,4vw,3rem);position:relative;transition:background .3s}
+    .st:hover{background:#FDFCFA}
+    .st-n{font-family:var(--fd);font-size:5rem;font-weight:700;line-height:1;letter-spacing:-.06em;color:var(--bdr);position:absolute;top:1.25rem;right:1.75rem;user-select:none;transition:color .3s}
+    .st:hover .st-n{color:rgba(196,96,60,.12)}
+    .st-i{width:42px;height:42px;border-radius:10px;background:var(--ac-bg);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+    .st-i svg{width:19px;height:19px;stroke:var(--ac);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+    .st h3{font-family:var(--fd);font-size:1.35rem;font-weight:400;letter-spacing:-.02em;margin-bottom:.625rem;line-height:1.2}
+    .st p{font-size:.9375rem;color:var(--ink3);line-height:1.65;text-wrap:pretty}
+    .st-dur{display:inline-block;margin-top:1.25rem;font-size:.6875rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ac);font-weight:600}
+
+    /* ═══ SERVICES ═══ */
+    #services{background:var(--dk)}
+    #services .lb{color:rgba(234,234,234,.35)}
+    .srv-hd{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;margin-bottom:clamp(3rem,5vw,4.5rem)}
+    .srv-hd p{font-size:1.0625rem;color:rgba(234,234,234,.5);line-height:1.75;text-wrap:pretty}
+    .bento{display:grid;grid-template-columns:2fr 1fr;gap:1px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.05);border-radius:20px;overflow:hidden}
+    .bc{background:var(--dk2);padding:clamp(1.75rem,3vw,2.5rem);position:relative;overflow:hidden;transition:background .3s}
+    .bc::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 10%,rgba(196,96,60,.08) 0%,transparent 55%);opacity:0;transition:opacity .4s}
+    .bc:hover{background:rgba(255,255,255,.03)}.bc:hover::before{opacity:1}
+    .bc.ft{grid-column:1/-1;background:rgba(196,96,60,.08);border:1px solid rgba(196,96,60,.15)}
+    .bc.ft:hover{background:rgba(196,96,60,.14)}
+    .bc.wd{grid-column:span 2}
+    .bc-i{width:40px;height:40px;border-radius:8px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+    .bc.ft .bc-i{background:rgba(196,96,60,.2)}
+    .bc-i svg{width:18px;height:18px;stroke:rgba(234,234,234,.6);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+    .bc.ft .bc-i svg{stroke:var(--ac)}
+    .bc h3{font-family:var(--fd);font-size:clamp(1.125rem,1.8vw,1.35rem);font-weight:400;letter-spacing:-.02em;color:var(--dk-tx);margin-bottom:.5rem}
+    .bc p{font-size:.9rem;color:rgba(234,234,234,.45);line-height:1.65;text-wrap:pretty}
+    .bc.ft p{font-size:1rem;color:rgba(234,234,234,.58)}
+    .tgs{margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:.5rem}
+    .tg{font-size:.6875rem;padding:.3rem .625rem;border:1px solid rgba(255,255,255,.08);border-radius:4px;color:rgba(234,234,234,.4);letter-spacing:.05em;text-transform:uppercase}
+
+    /* ═══ PORTFOLIO ═══ */
+    .port-hd{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:clamp(3rem,5vw,4.5rem);flex-wrap:wrap}
+    .port-ls{display:flex;flex-direction:column;gap:clamp(1.5rem,3vw,2.5rem)}
+    .pc{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(1.5rem,3vw,3rem);align-items:center;background:var(--sf);border-radius:20px;border:1px solid var(--bdr);padding:clamp(1.5rem,3vw,2.5rem);transition:border-color .3s,box-shadow .3s}
+    .pc:hover{border-color:var(--bdr-h);box-shadow:var(--s2)}
+    .pc.fl{grid-template-columns:1fr 1.4fr}
+    .pc.fl .pc-im{order:2}.pc.fl .pc-bd{order:1}
+    .pc-im{border-radius:12px;overflow:hidden;aspect-ratio:4/3}
+    .pc-im img{width:100%;height:100%;object-fit:cover;transition:transform .65s var(--e)}
+    .pc:hover .pc-im img{transform:scale(1.04)}
+    .pc-cat{display:inline-block;font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ac);font-weight:600;margin-bottom:.875rem}
+    .pc-bd h3{font-family:var(--fd);font-size:clamp(1.5rem,2.5vw,2.2rem);font-weight:400;letter-spacing:-.025em;margin-bottom:.75rem;line-height:1.15;text-wrap:balance}
+    .pc-bd>p{font-size:.9375rem;color:var(--ink3);line-height:1.68;margin-bottom:1.5rem;text-wrap:pretty}
+    .pm{display:flex;flex-wrap:wrap;gap:1.5rem;margin-bottom:1.75rem}
+    .pm-i{display:flex;flex-direction:column;gap:.15rem}
+    .pm-l{font-size:.6875rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink4)}
+    .pm-v{font-size:.9375rem;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums}
+
+    /* ═══ CTA ═══ */
+    .cta-b{background:var(--ink);text-align:center;padding:clamp(5rem,9vw,8rem) 0}
+    .cta-b .tl{color:var(--dk-tx);margin:.75rem 0 2.5rem}
+
+    /* ═══ TESTIMONIALS — 2-col masonry ═══ */
+    #testimonials{background:var(--sf)}
+    .tst-hd{text-align:center;max-width:560px;margin:0 auto clamp(3rem,5vw,4.5rem)}
+    .tst-g{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+    .tc{background:var(--bg);border:1px solid var(--bdr);border-radius:16px;padding:clamp(1.75rem,3vw,2.25rem);transition:box-shadow .3s,border-color .3s,transform .35s var(--e)}
+    .tc:hover{box-shadow:var(--s2);border-color:var(--bdr-h);transform:translateY(-4px)}
+    .tc.big{grid-row:span 2}
+    .strs{display:flex;gap:3px;margin-bottom:1.25rem}
+    .strs svg{width:14px;height:14px;fill:var(--ac)}
+    .tq{font-family:var(--fd);font-size:clamp(1rem,1.4vw,1.125rem);font-weight:400;color:var(--ink);line-height:1.6;letter-spacing:-.01em;font-style:italic;margin-bottom:1.5rem}
+    .ta{display:flex;align-items:center;gap:.875rem}
+    .ta-a{width:44px;height:44px;border-radius:22%;overflow:hidden;flex-shrink:0}
+    .ta-a img{width:100%;height:100%;object-fit:cover}
+    .ta-n{font-size:.9375rem;font-weight:600;letter-spacing:-.01em}
+    .ta-r{font-size:.8125rem;color:var(--ink3);margin-top:.1rem}
+
+    /* ═══ CONTACT ═══ */
+    .ct-g{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(3rem,7vw,7rem);align-items:start}
+    .ct-l>p{margin:1.25rem 0 2.5rem}
+    .ci{display:flex;flex-direction:column;gap:1rem}
+    .ci-i{display:flex;align-items:center;gap:.875rem;font-size:.9375rem;color:var(--ink2)}
+    .ci-c{width:36px;height:36px;border-radius:8px;background:var(--ac-bg);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .ci-c svg{width:16px;height:16px;stroke:var(--ac);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+    .cfm{background:var(--sf);border:1px solid var(--bdr);border-radius:20px;padding:clamp(2rem,4vw,3rem)}
+    .fg{margin-bottom:1.25rem}
+    .fr{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+    label{display:block;font-size:.875rem;font-weight:500;color:var(--ink);margin-bottom:.5rem}
+    .rq{color:var(--ac);margin-left:2px}
+    input,select,textarea{width:100%;font-family:var(--fb);font-size:.9375rem;color:var(--ink);background:var(--bg);border:1px solid var(--bdr-h);border-radius:8px;padding:.75rem 1rem;outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none}
+    input::placeholder,textarea::placeholder{color:var(--ink4)}
+    input:focus,select:focus,textarea:focus{border-color:var(--ac);box-shadow:0 0 0 3px rgba(196,96,60,.12)}
+    input.er,select.er,textarea.er{border-color:#DC2626}
+    .fe{font-size:.8125rem;color:#DC2626;margin-top:.375rem;display:none}
+    .fe.sh{display:block}
+    textarea{resize:vertical;min-height:120px}
+    select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%236B7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;cursor:pointer}
+    .fsb{margin-top:1.75rem}
+    .btn-f{width:100%;justify-content:center;font-size:1rem;padding:1rem}
+    .fnt{text-align:center;font-size:.8125rem;color:var(--ink4);margin-top:1rem;display:flex;align-items:center;justify-content:center;gap:.375rem}
+    .fnt svg{width:14px;height:14px;stroke:var(--ink4);fill:none;stroke-width:1.5;flex-shrink:0}
+    .fok{display:none;text-align:center;padding:3rem 2rem}
+    .fok.sh{display:block}
+    .fok-i{width:56px;height:56px;border-radius:50%;background:var(--ac-bg);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem}
+    .fok-i svg{width:24px;height:24px;stroke:var(--ac);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .fok h3{font-family:var(--fd);font-size:1.5rem;font-weight:400;letter-spacing:-.02em;margin-bottom:.625rem}
+    .fok p{font-size:.9375rem;color:var(--ink3);line-height:1.65}
+
+    /* ═══ FOOTER ═══ */
+    footer{background:var(--dk);color:rgba(234,234,234,.5);padding:clamp(3.5rem,6vw,5.5rem) 0 2rem}
+    .ft-t{display:grid;grid-template-columns:1.6fr repeat(3,1fr);gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:2rem}
+    .ft-br .logo{color:var(--dk-tx);display:block;margin-bottom:1rem}
+    .ft-br>p{font-size:.9rem;line-height:1.65;max-width:280px}
+    .ft-c h4{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--dk-tx);margin-bottom:1.25rem}
+    .ft-lk{display:flex;flex-direction:column;gap:.7rem}
+    .ft-lk a{font-size:.9rem;color:rgba(234,234,234,.4);transition:color .2s}
+    .ft-lk a:hover{color:var(--dk-tx)}
+    .ft-b{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+    .ft-b p{font-size:.8125rem}
+    .ft-lg{display:flex;gap:1.75rem}
+    .ft-lg a{font-size:.8125rem;color:rgba(234,234,234,.28);transition:color .2s}
+    .ft-lg a:hover{color:rgba(234,234,234,.55)}
+
+    /* ═══ RESPONSIVE ═══ */
+    @media(max-width:1024px){.hg{grid-template-columns:1fr}.h-vis{display:none}.ab-g{grid-template-columns:1fr}.ab-im{max-width:540px}.ab-bd{right:0}.srv-hd{grid-template-columns:1fr}.pc,.pc.fl{grid-template-columns:1fr}.pc.fl .pc-im{order:0}.pc.fl .pc-bd{order:0}.tst-g{grid-template-columns:1fr 1fr}.ct-g{grid-template-columns:1fr}.ft-t{grid-template-columns:1fr 1fr}}
+    @media(max-width:768px){.steps{grid-template-columns:1fr}.bento{grid-template-columns:1fr}.bc.ft,.bc.wd{grid-column:span 1}.tst-g{grid-template-columns:1fr}.tc.big{grid-row:span 1}.fr{grid-template-columns:1fr}.ab-vals{grid-template-columns:1fr}.ft-t{grid-template-columns:1fr}.nl,#nav .btn-s{display:none}.hm{display:flex}}
+    @media(max-width:480px){.h-ctas{flex-direction:column;align-items:flex-start}.h-kpi{gap:1.75rem}.port-hd{flex-direction:column;align-items:flex-start}.pm{gap:1rem}}
+    .ldg{pointer-events:none;opacity:.6}
+  </style>
+</head>
+
+<body>
+  <div id="pbar" role="progressbar" aria-hidden="true"></div>
+  <a href="#main" class="skip">Aller au contenu principal</a>
+
+  <nav id="mm" aria-label="Menu mobile" role="dialog">
+    <a href="#about" class="ml" onclick="closeMob()">L'agence</a>
+    <a href="#method" class="ml" onclick="closeMob()">Approche</a>
+    <a href="#services" class="ml" onclick="closeMob()">Services</a>
+    <a href="#portfolio" class="ml" onclick="closeMob()">Portfolio</a>
+    <a href="#contact" onclick="closeMob()" class="btn btn-p">Démarrer un projet <span class="ar">&rarr;</span></a>
+  </nav>
+
+  <header>
+    <nav id="nav" aria-label="Navigation principale">
+      <div class="ctn"><div class="nv">
+        <a href="#hero" class="logo">Atelier <em>Forma</em></a>
+        <ul class="nl">
+          <li><a href="#about">L'agence</a></li>
+          <li><a href="#method">Approche</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-s mag">Démarrer un projet <span class="ar">&rarr;</span></a>
+        <button class="hm" id="hm" aria-label="Menu" aria-expanded="false" onclick="toggleMob()"><span></span><span></span><span></span></button>
+      </div></div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section id="hero" aria-labelledby="hh1">
+      <div class="h-orb" aria-hidden="true"></div>
+      <div class="ctn"><div class="hg">
+        <div>
+          <div class="h-lb lb lb-a">Agence digitale — Paris</div>
+          <h1 class="txl h-h1" id="hh1">Votre présence digitale, au rang <em class="hi">d'art.</em></h1>
+          <p class="bt h-sub">Nous concevons des sites vitrines qui capturent l'essence de votre marque — avec une précision artisanale, une esthétique sans compromis et une performance qui convertit.</p>
+          <div class="h-ctas">
+            <a href="#contact" class="btn btn-p mag">Démarrer un projet <span class="ar">&rarr;</span></a>
+            <a href="#portfolio" class="btn btn-o">Voir nos réalisations</a>
+          </div>
+          <div class="h-kpi">
+            <div><div class="kv" data-count="47" data-suf="">47</div><div class="kl">Projets livrés</div></div>
+            <div><div class="kv" data-count="98" data-suf="%">98%</div><div class="kl">Clients satisfaits</div></div>
+            <div><div class="kv" data-count="6" data-suf=" ans">6 ans</div><div class="kl">D'expertise</div></div>
+          </div>
+        </div>
+        <div class="h-vis" aria-hidden="true">
+          <div class="hc"><img src="https://picsum.photos/seed/lacroix81/480/640" alt="Projet Maison Lacroix" loading="eager"><div class="hc-ov"><div class="hc-nm">Maison Lacroix</div><div class="hc-tg">Joaillerie de luxe</div></div></div>
+          <div class="hc"><img src="https://picsum.photos/seed/blanc42/480/640" alt="Projet Studio Blanc" loading="eager"><div class="hc-ov"><div class="hc-nm">Studio Blanc</div><div class="hc-tg">Architecture</div></div></div>
+          <div class="hc"><img src="https://picsum.photos/seed/doree19/480/640" alt="Projet Cuvée Dorée" loading="eager"><div class="hc-ov"><div class="hc-nm">Cuvée Dorée</div><div class="hc-tg">Domaine viticole</div></div></div>
+        </div>
+      </div></div>
+    </section>
+
+    <div class="band" aria-hidden="true"><div class="band-t">
+      <span class="band-i">Design premium</span><span class="band-i">Sites vitrines</span><span class="band-i">Direction artistique</span><span class="band-i">Animations fluides</span><span class="band-i">SEO technique</span><span class="band-i">Expérience utilisateur</span>
+      <span class="band-i">Design premium</span><span class="band-i">Sites vitrines</span><span class="band-i">Direction artistique</span><span class="band-i">Animations fluides</span><span class="band-i">SEO technique</span><span class="band-i">Expérience utilisateur</span>
+    </div></div>
+
+    <section id="about" class="sec" aria-labelledby="abh">
+      <div class="ctn"><div class="ab-g">
+        <div class="ab-im rv">
+          <img src="https://picsum.photos/seed/studio77/800/1080" alt="L'équipe Atelier Forma en session de travail" loading="lazy">
+          <div class="ab-bd"><strong>2018</strong><span>Fondée à Paris</span></div>
+        </div>
+        <div>
+          <span class="lb rv">Notre histoire</span>
+          <h2 class="tm rv d1" id="abh">Un studio où l'artisanat digital rencontre la <em class="hi">vision créative.</em></h2>
+          <p class="bt rv d2" style="margin-top:1.5rem">Atelier Forma est né d'une conviction simple : les marques ambitieuses méritent des sites web aussi soignés que ceux des grandes maisons. Depuis 2018, nous créons des expériences digitales qui racontent votre histoire avec clarté et élégance.</p>
+          <p class="bt rv d3">Notre équipe réunit designers, développeurs et stratèges partageant la même obsession : chaque pixel, chaque ligne de code, chaque mot doit servir un objectif précis — transformer vos visiteurs en clients fidèles.</p>
+          <div class="ab-vals rv d4">
+            <div class="av spot"><div class="av-i"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><h4>Artisanat digital</h4><p>Chaque projet est conçu sur mesure, avec une attention portée aux moindres détails.</p></div>
+            <div class="av spot"><div class="av-i"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h4>Livraison fiable</h4><p>Respect des délais et transparence totale à chaque étape du projet.</p></div>
+            <div class="av spot"><div class="av-i"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h4>Résultats mesurables</h4><p>Nous optimisons pour la conversion et le SEO, pas uniquement l'esthétique.</p></div>
+            <div class="av spot"><div class="av-i"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><h4>Partenariat durable</h4><p>Une relation long terme qui évolue avec vos ambitions et vos besoins.</p></div>
+          </div>
+        </div>
+      </div></div>
+    </section>
+
+    <section id="method" class="sec" aria-labelledby="mth">
+      <div class="ctn">
+        <div class="rv" style="max-width:600px;margin-bottom:clamp(3rem,5vw,5rem)"><span class="lb">Notre processus</span><h2 class="tl" id="mth">Quatre étapes vers l'excellence digitale.</h2></div>
+        <div class="steps rv d1">
+          <div class="st spot"><span class="st-n" aria-hidden="true">01</span><div class="st-i"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div><h3>Découverte et stratégie</h3><p>Brief approfondi, analyse concurrentielle, définition des personas et des objectifs de conversion. Nous construisons la fondation stratégique de votre projet.</p><span class="st-dur">2 – 3 semaines</span></div>
+          <div class="st spot"><span class="st-n" aria-hidden="true">02</span><div class="st-i"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><h3>Conception et direction artistique</h3><p>Architecture de l'information, wireframes, direction artistique complète avec maquettes haute fidélité desktop, tablette et mobile.</p><span class="st-dur">3 – 4 semaines</span></div>
+          <div class="st spot"><span class="st-n" aria-hidden="true">03</span><div class="st-i"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3>Développement et intégration</h3><p>Code propre, performant et accessible. Intégration CMS, optimisation Core Web Vitals, tests cross-browser et conformité WCAG 2.1 AA.</p><span class="st-dur">4 – 6 semaines</span></div>
+          <div class="st spot"><span class="st-n" aria-hidden="true">04</span><div class="st-i"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><h3>Lancement et optimisation</h3><p>Déploiement soigné, configuration SEO technique, tests de performance et suivi post-lancement avec tableau de bord analytics personnalisé.</p><span class="st-dur">1 – 2 semaines</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="sec" aria-labelledby="svh">
+      <div class="ctn">
+        <div class="srv-hd">
+          <div class="rv"><span class="lb">Ce que nous faisons</span><h2 class="tl" id="svh" style="color:var(--dk-tx)">Des services pensés pour votre croissance.</h2></div>
+          <p class="rv d2">De la conception à la mise en ligne, nous couvrons l'ensemble du spectre pour des résultats cohérents et performants, sans sous-traitance.</p>
+        </div>
+        <div class="bento rv d1">
+          <div class="bc ft"><div class="bc-i"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h3>Sites vitrines premium</h3><p>Notre cœur de métier. Des sites sur mesure qui reflètent l'identité de votre marque — design exclusif, animations soignées, expérience mémorable et résultats mesurables dès les premières semaines.</p><div class="tgs"><span class="tg">Next.js</span><span class="tg">Framer Motion</span><span class="tg">CMS headless</span><span class="tg">Sur mesure</span></div></div>
+          <div class="bc"><div class="bc-i"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><h3>Direction artistique</h3><p>Identité visuelle, charte graphique et univers de marque cohérent sur tous vos supports digitaux et print.</p></div>
+          <div class="bc"><div class="bc-i"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h3>Design system</h3><p>Bibliothèque de composants cohérente pour garantir la scalabilité de votre identité digitale dans le temps.</p></div>
+          <div class="bc"><div class="bc-i"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div><h3>Optimisation SEO</h3><p>Architecture technique, balisage sémantique, Core Web Vitals, stratégie de mots-clés et suivi des positions.</p><div class="tgs"><span class="tg">Technique</span><span class="tg">Analytics</span></div></div>
+          <div class="bc"><div class="bc-i"><svg viewBox="0 0 24 24"><path d="M5 3a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2H5zM3 9h18"/></svg></div><h3>Animations et interactions</h3><p>Micro-interactions, transitions fluides et animations scroll pour enrichir l'expérience et marquer les esprits.</p></div>
+          <div class="bc wd"><div class="bc-i"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Maintenance et support</h3><p>Mises à jour, sauvegardes, monitoring et évolutions fonctionnelles. Votre site toujours au sommet de sa performance.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="sec" aria-labelledby="pth">
+      <div class="ctn">
+        <div class="port-hd">
+          <div class="rv"><span class="lb">Nos réalisations</span><h2 class="tl" id="pth">Des projets qui parlent d'eux-mêmes.</h2></div>
+          <a href="#contact" class="btn btn-o rv d3">Tous les projets <span class="ar">&rarr;</span></a>
+        </div>
+        <div class="port-ls">
+          <article class="pc spot rv">
+            <div class="pc-im"><img src="https://picsum.photos/seed/lacroixcase/800/600" alt="Capture du site Maison Lacroix" loading="lazy"></div>
+            <div class="pc-bd">
+              <span class="pc-cat">Joaillerie de luxe</span>
+              <h3>Maison Lacroix</h3>
+              <p>Refonte complète du site vitrine pour cette maison de joaillerie parisienne fondée en 1978. Un univers d'élégance intemporelle traduit en expérience digitale immersive.</p>
+              <div class="pm"><div class="pm-i"><span class="pm-l">Résultat</span><span class="pm-v">+134% de demandes</span></div><div class="pm-i"><span class="pm-l">Délai</span><span class="pm-v">8 semaines</span></div><div class="pm-i"><span class="pm-l">Services</span><span class="pm-v">Design + Dev + SEO</span></div></div>
+              <a href="#contact" class="btn btn-s mag">Voir l'étude de cas <span class="ar">&rarr;</span></a>
+            </div>
+          </article>
+          <article class="pc fl spot rv d1">
+            <div class="pc-im"><img src="https://picsum.photos/seed/blanccase/800/600" alt="Capture du site Studio Blanc" loading="lazy"></div>
+            <div class="pc-bd">
+              <span class="pc-cat">Architecture et intérieur</span>
+              <h3>Studio Blanc</h3>
+              <p>Pour ce cabinet d'architecture marseillais, nous avons conçu un portfolio digital qui laisse les projets parler — minimalisme radical, navigation intuitive et photographie mise en valeur.</p>
+              <div class="pm"><div class="pm-i"><span class="pm-l">Résultat</span><span class="pm-v">+89% de leads qualifiés</span></div><div class="pm-i"><span class="pm-l">Délai</span><span class="pm-v">6 semaines</span></div><div class="pm-i"><span class="pm-l">Services</span><span class="pm-v">DA + Développement</span></div></div>
+              <a href="#contact" class="btn btn-s mag">Voir l'étude de cas <span class="ar">&rarr;</span></a>
+            </div>
+          </article>
+          <article class="pc spot rv d2">
+            <div class="pc-im"><img src="https://picsum.photos/seed/doreecase/800/600" alt="Capture du site Cuvée Dorée" loading="lazy"></div>
+            <div class="pc-bd">
+              <span class="pc-cat">Art de vivre et gastronomie</span>
+              <h3>Cuvée Dorée</h3>
+              <p>Ce domaine viticole du Lubéron voulait un site qui évoque le terroir, la passion et l'excellence. Résultat : une expérience sensorielle qui génère des réservations de visites directes.</p>
+              <div class="pm"><div class="pm-i"><span class="pm-l">Résultat</span><span class="pm-v">+212% de réservations</span></div><div class="pm-i"><span class="pm-l">Délai</span><span class="pm-v">10 semaines</span></div><div class="pm-i"><span class="pm-l">Services</span><span class="pm-v">DA + Dev + SEO</span></div></div>
+              <a href="#contact" class="btn btn-s mag">Voir l'étude de cas <span class="ar">&rarr;</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-b">
+      <div class="ctn">
+        <span class="lb lb-a rv">Prêt à commencer ?</span>
+        <h2 class="tl rv d1">Votre prochain site vitrine commence ici.</h2>
+        <a href="#contact" class="btn btn-p mag rv d2">Démarrer un projet <span class="ar">&rarr;</span></a>
+      </div>
+    </div>
+
+    <section id="testimonials" class="sec" aria-labelledby="tsth">
+      <div class="ctn">
+        <div class="tst-hd rv"><span class="lb">Ce qu'ils disent</span><h2 class="tm" id="tsth">La confiance de nos clients, notre meilleure récompense.</h2></div>
+        <div class="tst-g">
+          <article class="tc big spot rv">
+            <div class="strs"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <blockquote class="tq">"Atelier Forma a transformé notre présence digitale. Le site reflète exactement l'essence de Maison Lacroix — élégance, précision, intemporalité. Les demandes de devis ont augmenté de 134% dès le premier mois. Ce qui nous a le plus marqué, c'est leur capacité à traduire un univers physique en expérience digitale cohérente."</blockquote>
+            <div class="ta"><div class="ta-a"><img src="https://picsum.photos/seed/sophie11/88/88" alt="Sophie Moreau" loading="lazy"></div><div><div class="ta-n">Sophie Moreau</div><div class="ta-r">Directrice, Maison Lacroix</div></div></div>
+          </article>
+          <article class="tc spot rv d2">
+            <div class="strs"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <blockquote class="tq">"Un processus fluide, une équipe à l'écoute et un résultat qui dépasse nos attentes. Notre portfolio en ligne attire les clients que nous ciblons."</blockquote>
+            <div class="ta"><div class="ta-a"><img src="https://picsum.photos/seed/thomas22/88/88" alt="Thomas Richard" loading="lazy"></div><div><div class="ta-n">Thomas Richard</div><div class="ta-r">Associé, Studio Blanc Architecture</div></div></div>
+          </article>
+          <article class="tc spot rv d4">
+            <div class="strs"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <blockquote class="tq">"La meilleure décision pour le domaine. En 3 mois, les réservations de visites ont triplé et notre image a gagné en prestige considérablement."</blockquote>
+            <div class="ta"><div class="ta-a"><img src="https://picsum.photos/seed/amelie33/88/88" alt="Amélie Vernet" loading="lazy"></div><div><div class="ta-n">Amélie Vernet</div><div class="ta-r">Fondatrice, Cuvée Dorée</div></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="sec" aria-labelledby="cth">
+      <div class="ctn"><div class="ct-g">
+        <div class="ct-l rv">
+          <span class="lb">Travaillons ensemble</span>
+          <h2 class="tm" id="cth">Prêt à créer quelque chose d'exceptionnel ?</h2>
+          <p class="bt">Partagez votre projet avec nous. Nous vous répondons sous 24 heures avec une première analyse gratuite et sans engagement.</p>
+          <div class="ci">
+            <div class="ci-i"><div class="ci-c"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><span>bonjour@atelierforma.fr</span></div>
+            <div class="ci-i"><div class="ci-c"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 13a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 2.22h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006.29 6.29l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2.02z"/></svg></div><span>+33 (0)1 42 17 83 56</span></div>
+            <div class="ci-i"><div class="ci-c"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><span>15 rue du Faubourg Saint-Antoine, 75011 Paris</span></div>
+          </div>
+        </div>
+        <div class="cfm rv d2">
+          <form id="cf" novalidate>
+            <div class="fr">
+              <div class="fg"><label for="fn">Prénom <span class="rq">*</span></label><input type="text" id="fn" name="first_name" placeholder="Marie" autocomplete="given-name" required><span class="fe" id="fn-e">Veuillez entrer votre prénom.</span></div>
+              <div class="fg"><label for="ln">Nom <span class="rq">*</span></label><input type="text" id="ln" name="last_name" placeholder="Dupont" autocomplete="family-name" required><span class="fe" id="ln-e">Veuillez entrer votre nom.</span></div>
+            </div>
+            <div class="fg"><label for="em">Adresse email <span class="rq">*</span></label><input type="email" id="em" name="email" placeholder="marie@exemple.fr" autocomplete="email" required><span class="fe" id="em-e">Veuillez entrer une adresse email valide.</span></div>
+            <div class="fg"><label for="co">Entreprise / Marque</label><input type="text" id="co" name="company" placeholder="Maison Exemple" autocomplete="organization"></div>
+            <div class="fg"><label for="bu">Budget envisagé <span class="rq">*</span></label><select id="bu" name="budget" required><option value="" disabled selected>Sélectionnez une fourchette</option><option value="3-6k">3 000 – 6 000 euros</option><option value="6-12k">6 000 – 12 000 euros</option><option value="12-25k">12 000 – 25 000 euros</option><option value="25k+">25 000 euros et plus</option><option value="nsp">Je ne sais pas encore</option></select><span class="fe" id="bu-e">Veuillez sélectionner une fourchette.</span></div>
+            <div class="fg"><label for="msg">Votre projet <span class="rq">*</span></label><textarea id="msg" name="message" placeholder="Décrivez votre projet, vos objectifs et ce qui vous inspire..." required></textarea><span class="fe" id="msg-e">Veuillez décrire votre projet (10 caractères minimum).</span></div>
+            <div class="fsb"><button type="submit" class="btn btn-p btn-f mag" id="sb">Envoyer ma demande <span class="ar">&rarr;</span></button></div>
+            <p class="fnt"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Vos données sont protégées et ne seront jamais partagées.</p>
+          </form>
+          <div class="fok" id="fok">
+            <div class="fok-i"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <h3>Message envoyé.</h3>
+            <p>Nous avons bien reçu votre demande et vous répondrons dans les 24 heures.</p>
+          </div>
+        </div>
+      </div></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="ctn">
+      <div class="ft-t">
+        <div class="ft-br"><a href="#hero" class="logo">Atelier <em>Forma</em></a><p>Agence spécialisée dans la création de sites vitrines haut de gamme pour marques ambitieuses.</p></div>
+        <div class="ft-c"><h4>Services</h4><ul class="ft-lk"><li><a href="#services">Sites vitrines</a></li><li><a href="#services">Direction artistique</a></li><li><a href="#services">Design system</a></li><li><a href="#services">Optimisation SEO</a></li><li><a href="#services">Maintenance</a></li></ul></div>
+        <div class="ft-c"><h4>L'agence</h4><ul class="ft-lk"><li><a href="#about">Notre histoire</a></li><li><a href="#method">Notre approche</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#testimonials">Témoignages</a></li></ul></div>
+        <div class="ft-c"><h4>Contact</h4><ul class="ft-lk"><li><a href="#contact">Démarrer un projet</a></li><li><a href="mailto:bonjour@atelierforma.fr">bonjour@atelierforma.fr</a></li><li><a href="tel:+33142178356">+33 (0)1 42 17 83 56</a></li></ul></div>
+      </div>
+      <div class="ft-b">
+        <p>2025 Atelier Forma. Tous droits réservés.</p>
+        <nav class="ft-lg" aria-label="Liens légaux"><a href="#contact">Mentions légales</a><a href="#contact">Politique de confidentialité</a><a href="#contact">CGV</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const pb=document.getElementById('pbar');
+    window.addEventListener('scroll',()=>{pb.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%'},{passive:true});
+    const nv=document.getElementById('nav');
+    window.addEventListener('scroll',()=>{nv.classList.toggle('sc',window.scrollY>60)},{passive:true});
+    let mo=false;const hm=document.getElementById('hm'),mm=document.getElementById('mm');
+    function toggleMob(){mo=!mo;mm.classList.toggle('on',mo);hm.classList.toggle('on',mo);hm.setAttribute('aria-expanded',mo);document.body.style.overflow=mo?'hidden':''}
+    function closeMob(){mo=false;mm.classList.remove('on');hm.classList.remove('on');hm.setAttribute('aria-expanded','false');document.body.style.overflow=''}
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&mo)closeMob()});
+    const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')})},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+    document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+    function animC(el){const t=+el.dataset.count,s=el.dataset.suf||'',dur=1300,st=performance.now();function tick(n){const p=Math.min((n-st)/dur,1),e=1-Math.pow(1-p,3);el.textContent=Math.floor(e*t)+s;if(p<1)requestAnimationFrame(tick);else el.textContent=t+s}requestAnimationFrame(tick)}
+    const co=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){animC(e.target);co.unobserve(e.target)}})},{threshold:.5});
+    document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){const h=this.getAttribute('href');if(h==='#')return;const t=document.querySelector(h);if(!t)return;e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-76,behavior:'smooth'});if(mo)closeMob()})});
+    document.querySelectorAll('.mag').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.18}px,${(e.clientY-r.top-r.height/2)*.18}px)`});b.addEventListener('mouseleave',()=>{b.style.transform=''})});
+    document.querySelectorAll('.spot').forEach(c=>{c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')})});
+    const orb=document.querySelector('.h-orb');if(orb)window.addEventListener('scroll',()=>{orb.style.transform=`translateY(${window.scrollY*.16}px)`},{passive:true});
+    const fm=document.getElementById('cf'),fok=document.getElementById('fok'),sb=document.getElementById('sb');
+    const R={fn:['fn-e',v=>v.trim().length>0],ln:['ln-e',v=>v.trim().length>0],em:['em-e',v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)],bu:['bu-e',v=>v!==''],msg:['msg-e',v=>v.trim().length>=10]};
+    function vF(id,eid,ck){const el=document.getElementById(id),er=document.getElementById(eid),ok=ck(el.value);el.classList.toggle('er',!ok);er.classList.toggle('sh',!ok);return ok}
+    Object.keys(R).forEach(id=>{const[eid,ck]=R[id];document.getElementById(id)?.addEventListener('blur',()=>vF(id,eid,ck))});
+    if(fm)fm.addEventListener('submit',async e=>{e.preventDefault();if(!Object.keys(R).map(id=>vF(id,...R[id])).every(Boolean))return;sb.classList.add('ldg');sb.textContent='Envoi en cours...';await new Promise(r=>setTimeout(r,1400));fm.style.display='none';fok.classList.add('sh')});
+  </script>
+</body>
+</html>
